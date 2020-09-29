@@ -1,0 +1,5 @@
+elix-button::part(inner) {
+    background: red;
+    color: #fff;
+    padding: 20px;
+}
