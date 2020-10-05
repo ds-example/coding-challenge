@@ -31,6 +31,4 @@ class C360Welcome extends ReactiveElement {
   }
 }
 
-customElements.define(componentName, C360Welcome)
-
 export default C360Welcome

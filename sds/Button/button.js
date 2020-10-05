@@ -7,6 +7,4 @@ class SDSButton extends Button {
   }
 }
 
-customElements.define('sds-button', SDSButton)
-
 export default SDSButton
