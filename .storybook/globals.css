@@ -1,0 +1,44 @@
+:root {
+  /* Spacing */
+  --sds-g-spacing-xx-large: 3rem;
+  --sds-g-spacing-x-large: 2rem;
+  --sds-g-spacing-large: 1.5rem;
+  --sds-g-spacing-medium: 1rem;
+  --sds-g-spacing-small: 0.75rem;
+  --sds-g-spacing-x-small: 0.5rem;
+  --sds-g-spacing-xx-small: 0.25rem;
+  --sds-g-spacing-xxx-small: 0.125rem;
+
+  /* Sizing: Radius */
+  --sds-g-radius-large: 0.5rem;
+  --sds-g-radius-medium: 0.25rem;
+  --sds-g-radius-small: 0.125rem;
+
+  /* Palette: Brand */
+  --sds-g-color-brand-base-1: #fff;
+  --sds-g-color-brand-base-2: #f1f3fd;
+  --sds-g-color-brand-base-3: #dee5fc;
+  --sds-g-color-brand-base-4: #b8c8f9;
+  --sds-g-color-brand-base-contrast-1: #5693f5;
+  --sds-g-color-brand-base-contrast-2: #2b74d0;
+  --sds-g-color-brand-base-contrast-3: #1e5ca7;
+  --sds-g-color-brand-base-contrast-4: #051732;
+
+  /* Palette: Neutral */
+  --sds-g-color-neutral-base-1: #fff;
+  --sds-g-color-neutral-base-2: #f3f3f3;
+  --sds-g-color-neutral-base-3: #e5e5e5;
+  --sds-g-color-neutral-base-4: #c9c9cb;
+  --sds-g-color-neutral-base-contrast-1: #929398;
+  --sds-g-color-neutral-base-contrast-2: #737479;
+  --sds-g-color-neutral-base-contrast-3: #5a5c61;
+  --sds-g-color-neutral-base-contrast-4: #181818;
+}
+
+html {
+  font-family: "system-ui";
+}
+
+body {
+  font-size: 0.875rem;
+}
