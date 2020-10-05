@@ -1,4 +1,4 @@
-elix-button::part(inner) {
+sds-button::part(inner) {
   padding-top: var(--sds-c-button-padding-vertical, var(--sds-g-spacing-small));
   padding-bottom: var(
     --sds-c-button-padding-vertical,
