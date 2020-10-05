@@ -6,7 +6,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build": "build-storybook -o .out",
-    "start": "npx serve .out -p $PORT"
+    "start": "npx http-server .out -p $PORT"
   },
   "keywords": [],
   "author": "",
