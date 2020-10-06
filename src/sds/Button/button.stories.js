@@ -1,3 +1,4 @@
+import { fragmentFrom } from 'elix/src/core/htmlLiterals.js'
 import SDSButton from './button'
 import docs from './docs.mdx'
 
@@ -11,15 +12,13 @@ export default {
 }
 
 export const BaseButton = () => {
-  const button = new SDSButton()
-  button.innerText = 'Base Button'
-  button.variant = 'base'
-  return button
+  return fragmentFrom.html`
+    <sds-button variant="base">Base Button</sds-button>
+  `
 }
 
 export const BrandButton = () => {
-  const button = new SDSButton()
-  button.innerText = 'Brand Button'
-  button.variant = 'brand'
-  return button
+  return fragmentFrom.html`
+    <sds-button variant="brand">Brand Button</sds-button>
+  `
 }
