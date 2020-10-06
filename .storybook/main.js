@@ -1,7 +1,20 @@
 module.exports = {
   stories: [
-    '../intro/**/*.stories.js',
-    '../c360/**/*.stories.js',
-    '../sds/**/*.stories.js'
+    '../src/intro/**/*.stories.js',
+    '../src/c360/**/*.stories.js',
+    '../src/sds/**/*.stories.js'
+  ],
+  addons: [
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null
+      }
+    },
+    '@storybook/addon-viewport',
+    '@storybook/addon-a11y',
+    '@storybook/addon-storysource'
   ]
 }

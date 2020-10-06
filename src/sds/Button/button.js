@@ -1,7 +1,6 @@
 import Button from 'elix/src/base/Button.js'
 import {
   defaultState,
-  ids,
   render,
   setState,
   state,
