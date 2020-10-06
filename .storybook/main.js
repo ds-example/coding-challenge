@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    '../intro/**/*.stories.js',
-    '../c360/**/*.stories.js',
-    '../sds/**/*.stories.js'
+    '../src/intro/**/*.stories.js',
+    '../src/c360/**/*.stories.js',
+    '../src/sds/**/*.stories.js'
   ]
 }

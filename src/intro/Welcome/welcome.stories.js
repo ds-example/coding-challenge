@@ -5,6 +5,5 @@ export default {
 }
 
 export const Intro = () => {
-  const welcomeContent = new Welcome()
-  return welcomeContent
+  return new Welcome()
 }
