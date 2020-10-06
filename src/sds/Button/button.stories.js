@@ -1,8 +1,13 @@
 import SDSButton from './button'
-import './button.css'
+import docs from './docs.mdx'
 
 export default {
-  title: 'SDS Components/Button'
+  title: 'SDS Components/Button',
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 }
 
 export const BaseButton = () => {
