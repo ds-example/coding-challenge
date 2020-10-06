@@ -1,5 +1,4 @@
 import { fragmentFrom } from 'elix/src/core/htmlLiterals.js'
-import SDSButton from './button'
 import docs from './docs.mdx'
 
 export default {
