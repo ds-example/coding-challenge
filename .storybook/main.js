@@ -12,6 +12,7 @@ module.exports = {
         babelOptions: {},
         sourceLoaderOptions: null
       }
-    }
+    },
+    '@storybook/addon-viewport'
   ]
 }
