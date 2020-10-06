@@ -13,6 +13,7 @@ module.exports = {
         sourceLoaderOptions: null
       }
     },
-    '@storybook/addon-viewport'
+    '@storybook/addon-viewport',
+    '@storybook/addon-a11y'
   ]
 }
