@@ -8,7 +8,7 @@ import {
 } from 'elix/src/base/internal.js'
 import { fragmentFrom } from 'elix/src/core/htmlLiterals.js'
 
-import stylesheet from '!!raw-loader!./button.css'
+import stylesheet from './button.css'
 
 class SDSButton extends Button {
   get [defaultState]() {
