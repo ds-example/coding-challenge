@@ -74,7 +74,11 @@ We'll talk more about stories below in the Component Structure section, and you 
 
 #### Storybook Addons
 
-We have installed a few addons within Storybook to assist with your development.
+We have installed a few addons within Storybook to assist with your development:
+
+- [Accessibility Validator](https://github.com/storybookjs/storybook/tree/master/addons/a11y) (AXE)
+- [Docs](https://storybook.js.org/docs/react/writing-docs/introduction)
+- [Viewports](https://storybook.js.org/docs/react/essentials/viewport)
 
 ### Elix Web Components
 
