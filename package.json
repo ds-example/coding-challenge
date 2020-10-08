@@ -1,18 +1,16 @@
 {
   "name": "c360-test",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Engineering Test for Salesforce DSE team candidates",
+  "author": "Jade Pennig <jpennig@salesforce.com>",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006",
     "build": "build-storybook -o .out",
     "start": "npx http-server .out -p $PORT",
     "stylelint": "stylelint src/**/*.css",
     "eslint": "eslint src/**/*.js",
     "test": "npm run stylelint && npm run eslint"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -37,6 +35,5 @@
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0"
-  },
-  "dependencies": {}
+  }
 }
