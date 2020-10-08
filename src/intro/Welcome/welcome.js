@@ -1,8 +1,10 @@
-import { ReactiveElement, internal, template } from 'elix'
+import ReactiveElement from 'elix/src/core/ReactiveElement'
+import { template } from 'elix/src/base/internal'
+import { templateFrom } from 'elix/src/core/htmlLiterals'
 
 class C360Welcome extends ReactiveElement {
-  get [internal.template]() {
-    return template.html`
+  get [template]() {
+    return templateFrom.html`
       <h1>Salesforce Design System Engineering</h1>
 
       <h2>Take Home Developer Test</h2>
