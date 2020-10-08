@@ -54,11 +54,17 @@ Each component is defined by the following files:
 * `{component}.css` The CSS file for the component. Imported by the component JS file and injected into the component's shadow. Feel free to style with whatever means you find comfortable, but do feel encourage to check out source code for other components to get a sense of how we align our selectors. Optionally, you can consider CSS
 * `docs.mdx` The MDX-based documentation for the component. Extra credit for your work can be achieved by creating documentation for your component.
 
+### Boilerplate Setup
+
+We've gone ahead and created the files and bare code structures needed for you to get started coding. You can find these files in `src/c360/Card` and `src/c360/CardGroup`.
+
+We've also registered the web components in the Storybook environment, so you don't have to do any configuration wrangling. For the curious, you can see how we register the web components in `.storybook/preview.js`. This file configures the Preview window in the Storybook dev environment.
+
 ## Tech Stack Overview
 
 ### Storybook
 
-This project uses Storybook for its development environment. Storybook is a great way of developing UI components in isolation. It provides conventions for writing "stories" for your components, which are really just ways of showcasing specific states and variations that you need your component to support.
+This project uses Storybook for its development enviWronment. Storybook is a great way of developing UI components in isolation. It provides conventions for writing "stories" for your components, which are really just ways of showcasing specific states and variations that you need your component to support.
 
 Within Storybook, each component gets a `*.stories.js` file that has a series of exports, with each being what we call a story. Stories are named in CapitalCase and should be named descriptively.
 
