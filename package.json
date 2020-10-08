@@ -4,7 +4,7 @@
   "description": "Engineering Test for Salesforce DSE team candidates",
   "author": "Jade Pennig <jpennig@salesforce.com>",
   "scripts": {
-    "dev": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006 -s static",
     "build": "build-storybook -o .out",
     "start": "npx http-server .out -p $PORT",
     "stylelint": "stylelint src/**/*.css",

@@ -51,7 +51,7 @@ Each component is defined by the following files:
 - `{component}.js` The main component JS file, written in the Elix web components framework.
 
 * `{component}.stories.js` The Storybook file for the component, written in [Component Story Format (CSF)](https://storybook.js.org/docs/html/api/csf).
-* `{component}.css` The CSS file for the component. Imported by the component JS file and injected into the component's shadow. Feel free to style with whatever means you find comfortable, but do feel encourage to check out source code for other components to get a sense of how we align our selectors. Optionally, you can consider CSS
+* `{component}.css` The CSS file for the component. Imported by the component JS file and injected into the component's shadow. Feel free to style with whatever means you find comfortable, but do feel encourage to check out source code for other components to get a sense of how we align our selectors.
 * `docs.mdx` The MDX-based documentation for the component. Extra credit for your work can be achieved by creating documentation for your component.
 
 ### Boilerplate Setup
