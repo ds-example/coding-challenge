@@ -1,5 +1,4 @@
 import { fragmentFrom } from 'elix/src/core/htmlLiterals'
-// import './card-group' // uncomment to import web component file
 import docs from './docs.mdx'
 
 export default {
@@ -15,11 +14,11 @@ export const RFC = () => {
   return fragmentFrom.html`
     <h1>Card Group</h1>
     <p>
-      You need to build this Card Group component from the specs 
-      outlined in the project's README file. Add one or more 
-      additional "Stories" (this function is a story) that 
-      showcase your component, and use Storybook's addons, such as 
-      the responsive viewport, or the AXE accessibility validator, 
+      You need to build this Card Group component from the specs
+      outlined in the project's README file. Add one or more
+      additional "Stories" (this function is a story) that
+      showcase your component, and use Storybook's addons, such as
+      the responsive viewport, or the AXE accessibility validator,
       to ensure that your component code is bulletproof.
     </p>
     <p>

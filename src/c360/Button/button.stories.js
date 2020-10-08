@@ -2,7 +2,7 @@ import { fragmentFrom } from 'elix/src/core/htmlLiterals.js'
 import docs from './docs.mdx'
 
 export default {
-  title: 'SDS Components/Button',
+  title: 'C360 Components/Button',
   parameters: {
     docs: {
       page: docs
@@ -10,8 +10,8 @@ export default {
   }
 }
 
-export const BaseButton = () => {
+export const BrandButton = () => {
   return fragmentFrom.html`
-    <sds-button variant="base">Base Button</sds-button>
+    <c360-button variant="brand">Brand Button</c360-button>
   `
 }

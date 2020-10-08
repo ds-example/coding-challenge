@@ -8,9 +8,10 @@ import {
 } from 'elix/src/base/internal.js'
 import { fragmentFrom } from 'elix/src/core/htmlLiterals.js'
 
+import common from '../common/common.css'
 import stylesheet from './button.css'
 
-class SDSButton extends Button {
+class SdsButton extends Button {
   get [defaultState]() {
     return Object.assign(super[defaultState], {
       variant: ''
@@ -32,9 +33,15 @@ class SDSButton extends Button {
   get [template]() {
     const result = super[template]
 
+    const inner = result.content.querySelector('[part~="inner"]')
+    if (inner) {
+      inner.part.add('button')
+    }
+
     result.content.append(fragmentFrom.html`
       <style>
-       ${stylesheet}
+        ${common}
+        ${stylesheet}
       </style>
     `)
     return result
@@ -57,4 +64,4 @@ class SDSButton extends Button {
   }
 }
 
-export default SDSButton
+export default SdsButton

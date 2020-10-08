@@ -1,4 +1,4 @@
-[part~='inner'] {
+[part~='button'] {
   padding-top: var(--sds-c-button-padding-vertical, var(--sds-g-spacing-small));
   padding-bottom: var(
     --sds-c-button-padding-vertical,
@@ -18,9 +18,4 @@
     var(--sds-g-color-brand-base-contrast-2)
   );
   border-radius: var(--sds-c-button-radius, var(--sds-g-radius-medium));
-}
-
-:host([variant='brand']) {
-  --sds-c-button-color-background: var(--sds-g-color-brand-base-contrast-2);
-  --sds-c-button-color-text: var(--sds-g-color-brand-base-1);
 }

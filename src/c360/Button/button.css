@@ -1,0 +1,5 @@
+
+:host([variant='brand']) {
+  --sds-c-button-color-background: var(--sds-g-color-brand-base-contrast-2);
+  --sds-c-button-color-text: var(--sds-g-color-brand-base-1);
+}
