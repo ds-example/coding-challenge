@@ -1,4 +1,17 @@
-:root {
+html {
+  /* Font Sizing */
+  --sds-g-font-size-1: 0.625rem;
+  --sds-g-font-size-2: 0.75rem;
+  --sds-g-font-size-3: 0.8125rem;
+  --sds-g-font-size-4: 0.875rem;
+  --sds-g-font-size-5: 1rem;
+  --sds-g-font-size-6: 1.125rem;
+  --sds-g-font-size-7: 1.25rem;
+  --sds-g-font-size-8: 1.5rem;
+  --sds-g-font-size-9: 1.75rem;
+  --sds-g-font-size-10: 2rem;
+  --sds-g-font-size-11: 2.625rem;
+
   /* Spacing */
   --sds-g-spacing-xx-large: 3rem;
   --sds-g-spacing-x-large: 2rem;
@@ -33,10 +46,20 @@
   --sds-g-color-neutral-base-contrast-2: #737479;
   --sds-g-color-neutral-base-contrast-3: #5a5c61;
   --sds-g-color-neutral-base-contrast-4: #181818;
+
+  /* Palete: Destructive */
+  --sds-g-color-destructive-base-1: #fff;
+  --sds-g-color-destructive-base-2: #fef1ee;
+  --sds-g-color-destructive-base-3: #feded8;
+  --sds-g-color-destructive-base-4: #feb8ab;
+  --sds-g-color-destructive-base-contrast-1: #fe5c4c;
+  --sds-g-color-destructive-base-contrast-2: #ea001e;
+  --sds-g-color-destructive-base-contrast-3: #ba0517;
+  --sds-g-color-destructive-base-contrast-4: #640103;
 }
 
 html {
-  font-family: "system-ui";
+  font-family: 'system-ui';
 }
 
 body {
