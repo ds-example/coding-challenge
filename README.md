@@ -51,7 +51,7 @@ Each component is defined by the following files:
 - `{component}.js` The main component JS file, written in the Elix web components framework.
 
 * `{component}.stories.js` The Storybook file for the component, written in [Component Story Format (CSF)](https://storybook.js.org/docs/html/api/csf).
-* `{component}.css` The CSS file for the component. Imported by the component JS file and injected into the component's shadow. Feel free to style with whatever means you find comfortable, but do feel encourage to check out source code for other components to get a sense of how we align our selectors.
+* `{component}.css` The CSS file for the component. Imported by the component JS file and injected into the component's shadow. Feel free to style with whatever means you find comfortable, but do feel encouraged to check out source code for other components to get a sense of how we align our selectors.
 * `docs.mdx` The MDX-based documentation for the component. Extra credit for your work can be achieved by creating documentation for your component.
 
 ### Boilerplate Setup
@@ -64,9 +64,9 @@ We've also registered the web components in the Storybook environment, so you do
 
 ### Storybook
 
-This project uses Storybook for its development enviWronment. Storybook is a great way of developing UI components in isolation. It provides conventions for writing "stories" for your components, which are really just ways of showcasing specific states and variations that you need your component to support.
+This project uses Storybook for its development environment. Storybook is a great way of developing UI components in isolation. It provides conventions for writing "stories" for your components, which are really just ways of showcasing specific states and variations that you need your component to support.
 
-Within Storybook, each component gets a `*.stories.js` file that has a series of exports, with each being what we call a story. Stories are named in CapitalCase and should be named descriptively.
+Within Storybook, each component gets a `{component}.stories.js` file that has a series of exports, with each being what we call a story. Stories are named in CapitalCase and should be named descriptively.
 
 For instance, we have a story called `Base` for our default Button component, along with a story called `Brand` to showcase our Brand Button variant.
 
