@@ -4,6 +4,14 @@ export default {
   title: 'SDS Elements/Global CSS Variables'
 }
 
+export const Intro = () => {
+  return fragmentFrom.html`
+    <h1>Global CSS Variables</h1>
+    <p>This section is a guide to help document our global CSS Variables that are available for use within your component CSS files.</p>
+    <p>Each section has a list of tokens, their values, and a visual representation of that value.</p>
+  `
+}
+
 export const SpacingVars = () => {
   return fragmentFrom.html`
     <h1>Spacing Vars</h1>
