@@ -29,14 +29,20 @@ module.exports = {
     rules.push({
       test: /\.css$/,
       use: ['raw-loader'],
-      include: path.resolve(__dirname, '../src')
+      include: path.resolve(__dirname, '../src'),
+      exclude: path.resolve(__dirname, '../src/globals.css')
     })
 
     rules.push({
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
-      include: path.resolve(__dirname, '../'),
-      exclude: path.resolve(__dirname, '../src')
+      include: path.resolve(__dirname, '../src/globals.css')
+    })
+
+    // Add markdown support
+    rules.push({
+      test: /\.md$/,
+      use: ['markdown-loader']
     })
 
     config.module.rules = rules

@@ -1,9 +1,10 @@
-import Welcome from './welcome'
+import readme from '../../../README.md'
 
 export default {
   title: 'C360 Test/Welcome'
 }
 
 export const Intro = () => {
-  return new Welcome()
+  // the replace is for updating the url path on static assets
+  return readme.replace(/"static\/demo/g, '"demo')
 }

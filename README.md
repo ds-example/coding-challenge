@@ -2,7 +2,18 @@
 
 Hello, and welcome to our developer test! Thank you for considering the Salesforce Design System team for your next career opportunity.
 
-## The Challenge
+## Code Challenge Goals
+
+This code challenge is going to introduce you to a lot of technology you may not be familiar with, and it's important to note up front that we do not expect you to end up with a completely polished end result. Rather, we are looking to give you a sense of what it'd be like to work on our product here at Salesforce.
+
+We are hoping you invest around 2-4 hours on this effort. Take this time to explore [Storybook](https://storybook.js.org/), read up on [Elix Web Components](https://component.kitchen/elix), and dig into the code! We have left lots of source code to explore, to help you get a sense of our code style and how things function within our tech stack. We have also left boilerplate code for the engineering challenge we have given you.
+
+We hope you use this challenge to get a foundational understanding of what your work will be like at Salesforce. Do take notes and get some questions together, after you submit your test you will have a follow up code review with our engineering team.
+
+**By the way, you're not expected to support IE11.
+Feel free to stick to your preferred modern web browser to work on this challenge.**
+
+## Component Buildout Challenge
 
 You are tasked with building two net new components for our design system.
 
@@ -10,7 +21,7 @@ The primary composition component will be called `CardGroup`, and will consist o
 
 ![Component design image](static/demo/comp-preview.png)
 
-Effectively, it's a (optional) headline element composed with a number of `Card` components, which is the other component you will be building out for this challenge.
+Effectively, it's a (optional) headline element composed with a number of `Card` components, which is the other component you will be building out.
 
 A `Card` contains a headline, optional image element, short text description, and a call to action button.
 
@@ -28,20 +39,27 @@ In the root of the project, run `npm install`, and then run `npm run dev` to sta
 
 Note that this repo has been made specifically for your project, so you can and should interact directly with it (as opposed to creating a fork). We've set up GitHub Actions CI and Heroku review apps within this repo to assist with your development workflow.
 
-### Development Prerequesites
+### Development Prerequisites
 
 To work on this project, you should have some basics installed:
 
-- Node v12 (we encourage use of [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) to manage node versions)
+- Node v12 (we encourage use of [NVM](https://github.com/nvm-sh/nvm#installing-and-updating) to manage node versions, if necessary)
 - [VS Code](https://code.visualstudio.com/)
   - [Prettier extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) installed
+
+#### Scripts in package.json
+
+Aside from the `dev` script, we have a few other scripts declared in our `package.json` file. You won't need to interact with them, but for reference, this is what they do:
+
+- `build` This will create a static (compiled) Storybook build for distribution.
+- `start` This will start the static (compiled) Storybook build on a specified port. This gets run by Heroku for app deployment.
 
 ## Source Code & Component Structure
 
 In this project, all of the source code is within the `src/` folder. We have our components split up into three projects:
 
 - `SDS/` - Our Base Component Subsystem. You will be using these components as you build out your own components. The SDS Engineering team has already built out these components.
-- `c360/` - The C360 Subsystem. This is experience component layer where your work will live. We have scaffoled out the components you will need to build, but the rest is up to you.
+- `c360/` - The C360 Subsystem. This is experience component layer where your work will live. We have scaffolded out the components you will need to build, but the rest is up to you.
 - `intro/` - Our Welcome component lives here. You won't need to interact with this directory.
 
 ### Component Files
@@ -59,6 +77,24 @@ Each component is defined by the following files:
 We've gone ahead and created the files and bare code structures needed for you to get started coding. You can find these files in `src/c360/Card` and `src/c360/CardGroup`.
 
 We've also registered the web components in the Storybook environment, so you don't have to do any configuration wrangling. For the curious, you can see how we register the web components in `.storybook/preview.js`. This file configures the Preview window in the Storybook dev environment.
+
+## Working with our Tech
+
+### Global CSS Variables
+
+We encourage you to write your CSS with our global variables, instead of using hard-coded values. This helps keep your code consistent with the overall look and feel of our design system.
+
+You can reference our global CSS Variables through the `SDS Elements / Global CSS Variables` stories in the Storybook development environment. They also live in `src/globals.css`.
+
+### Building with Existing Components
+
+We have a few components already in our system that you can use to help compose your components. These are located within the 'C360 Components' directory.
+
+#### SDS and C360 - What do they Mean?
+
+While we don't want to overload you with the details, we do have a separation of components within our system. SDS defines a primitive set of base level components, and C360 takes those low-level components and decorates them for use within the C360 design system.
+
+For your challenge, stick to building with the C360 components, as they've been created to fit your code challenge. If you are curious, you can review the C360 and SDS source code (say, for the `Button` component) to get a sense of the component composition structures at work behind the scenes.
 
 ## Tech Stack Overview
 
@@ -82,25 +118,33 @@ We have installed a few addons within Storybook to assist with your development:
 
 ### Elix Web Components
 
-This project makes use of the [Elix Web Components](https://component.kitchen/elix) framework. Elix is a minimalistic WC framework, capable of being run directly in a modern web browser with no compilation or transpilation necessary.
+This project makes use of the [Elix Web Components](https://component.kitchen/elix) framework. Elix is a minimalist Web Component framework that runs close to the "browser metal", and is capable of being run directly in a modern web browser with no pre-compilation or transpilation necessary.
 
 Elix will likely not be a framework you have used before, but it's based in native ES6 Javascript. We encourage you to read through their documentation, as well as review the source code available within this project. The SDS components we have built are all using Elix, and can be used to help guide your path forward.
 
+Elix uses subclasses and mixins to support component composition. Most components we make will be subclasses of the `ReactiveElement` class, and we encourage you to refer to the [ReactiveElement documentation page](https://component.kitchen/elix/ReactiveElement).
+
+Other Elix documentation pages you may find of interest are their pages on [Element Customization](https://component.kitchen/elix/customizing) and [State Management](https://component.kitchen/elix/ReactiveMixin).
+
 #### HTML Escape Hatch
 
-If Elix proves to be too daunting of a task, you can alternatively compose your stories in HTML directly. The story files we have scaffoled for you already use Elix's built in HTML templating engine, which is simply a Javascript string literal with HTML inside it. Replace that HTML with your own to showcase your work.
+If Elix proves to be too daunting of a task, you can alternatively compose your stories in HTML directly. The story files we have scaffolded for you already use Elix's built in HTML template engine, which is simply a Javascript string literal with HTML inside it. Replace that HTML with your own to showcase your work.
 
 See `src/c360/Card/card.stories.js` and `src/c360/CardGroup/card-group.stories.js` for how you can write your stories with HTML within the Storybook environment.
 
+### Static Assets
+
+Static assets can be stored in the `static` folder.
+
 ## Testing & Validating Code
 
-We have a few methods for teting and validating the code you write. We have eslint and stylelint standards established, those can be run through `npm test`, and are additionally run in our CI environment when Pull Requests are opened.
+We have a few methods for testing and validating the code you write. We have eslint and stylelint standards established, those can be run through `npm test`, and are additionally run in our CI environment when Pull Requests are opened.
 
 We also have Axe validation within Storybook, installed as an addon, to assist with Accessibility validation.
 
 ## Submitting Your Test
 
-Once you are feeling confident, push your code to a branch on GitHub and open a PR. Our CI test suite will run, and a review web app will spin up on Heroku. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
+Once you feel ready, push your code to a branch on GitHub and open a PR. Our CI test suite will run, and a review web app will spin up on Heroku. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
 
 Let your recruiter know you've submitted your test, and our team will be in touch shortly after to follow up with a technical review.
 
