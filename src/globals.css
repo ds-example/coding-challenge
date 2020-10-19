@@ -1,4 +1,7 @@
 html {
+  font-family: 'system-ui', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+
   /* Font Sizing */
   --sds-g-font-size-1: 0.625rem;
   --sds-g-font-size-2: 0.75rem;
@@ -59,11 +62,6 @@ html {
 }
 
 /* Baseline Global CSS */
-html {
-  font-family: 'system-ui', 'Helvetica Neue', Helvetica, 'sans-serif';
-  font-size: 16px;
-}
-
 body {
   font-size: 0.875rem;
   line-height: 1.5;

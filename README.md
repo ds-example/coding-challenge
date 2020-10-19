@@ -49,8 +49,9 @@ To work on this project, you should have some basics installed:
 
 #### Scripts in package.json
 
-Aside from the `dev` script, we have a few other scripts declared in our `package.json` file. You won't need to interact with them, but for reference, this is what they do:
+In addition to the `dev` script, we have a few other scripts declared in our `package.json` file:
 
+- `test` This will run our test suite against the project's source code.
 - `build` This will create a static (compiled) Storybook build for distribution.
 - `start` This will start the static (compiled) Storybook build on a specified port. This gets run by Heroku for app deployment.
 
