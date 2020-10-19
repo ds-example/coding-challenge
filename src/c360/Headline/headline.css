@@ -1,5 +1,5 @@
 :host([size='x-large']) {
-  font-weight: 300;
+  font-weight: 200;
 
   --sds-c-headline-font-size: var(--sds-g-font-size-11);
 }
