@@ -47,7 +47,7 @@ html {
   --sds-g-color-neutral-base-contrast-3: #5a5c61;
   --sds-g-color-neutral-base-contrast-4: #181818;
 
-  /* Palete: Destructive */
+  /* Palette: Destructive */
   --sds-g-color-destructive-base-1: #fff;
   --sds-g-color-destructive-base-2: #fef1ee;
   --sds-g-color-destructive-base-3: #feded8;
@@ -58,12 +58,47 @@ html {
   --sds-g-color-destructive-base-contrast-4: #640103;
 }
 
+/* Baseline Global CSS */
 html {
-  font-family: 'system-ui', 'Helvetica Neue', 'sans-serif';
+  font-family: 'system-ui', 'Helvetica Neue', Helvetica, 'sans-serif';
   font-size: 16px;
 }
 
 body {
   font-size: 0.875rem;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p,
+li {
+  font-size: 1rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+code {
+  background-color: #eee;
+  padding: 5px;
 }

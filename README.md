@@ -96,6 +96,10 @@ While we don't want to overload you with the details, we do have a separation of
 
 For your challenge, stick to building with the C360 components, as they've been created to fit your code challenge. If you are curious, you can review the C360 and SDS source code (say, for the `Button` component) to get a sense of the component composition structures at work behind the scenes.
 
+### Shadow DOM
+
+Since we are building with web components, we are in the world of the [shadow DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM). Each component has its own CSS file that gets injected into the component's shadow root. Understand that styles declared outside of this root will not penetrate the shadow, only our global CSS variables will be available through the shadow boundary.
+
 ## Tech Stack Overview
 
 ### Storybook
@@ -115,6 +119,15 @@ We have installed a few addons within Storybook to assist with your development:
 - [Accessibility Validator](https://github.com/storybookjs/storybook/tree/master/addons/a11y) (AXE)
 - [Docs](https://storybook.js.org/docs/react/writing-docs/introduction)
 - [Viewports](https://storybook.js.org/docs/react/essentials/viewport)
+
+#### Storybook Keyboard Shortcuts
+
+Storybook has some keyboard shortcuts for you to assist with development. Of note are the following (although this is not a complete list):
+
+- `a`: press the `a` key to toggle the Addon window
+- `d`: press the `d` key to toggle the placement of the Addon window (right vs bottom)
+
+A list of all of the Storybook keyboard shortcuts can be found by pressing `cmd` + `shift` + `,`. You can also review this content directly through the `(...)` menu in the Storybook interface.
 
 ### Elix Web Components
 
