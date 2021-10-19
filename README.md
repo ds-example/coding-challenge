@@ -60,7 +60,7 @@ In addition to the `dev` script, we have a few other scripts declared in our `pa
 In this project, all of the source code is within the `src/` folder. We have our components split up into three projects:
 
 - `SDS/` - Our Base Component Subsystem. You will be using these components as you build out your own components. The SDS Engineering team has already built out these components.
-- `c360/` - The C360 Subsystem. This is experience component layer where your work will live. We have scaffolded out the components you will need to build, but the rest is up to you.
+- `c360/` - The C360 Subsystem. This is the experience component layer where your work will live. We have scaffolded out the components you will need to build, but the rest is up to you.
 - `intro/` - Our Welcome component lives here. You won't need to interact with this directory.
 
 ### Component Files

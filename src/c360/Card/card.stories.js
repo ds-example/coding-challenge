@@ -24,7 +24,7 @@ export const RFC = () => {
     <p>
       We have scaffolded out two components to assist with your
       development - this one, which is intended to contain the contents
-      within the shaded 'card', as well as a 'CardContainer' component,
+      within the shaded 'card', as well as a 'CardGroup' component,
       that containts the composed component's structure.
     </p>
   `
