@@ -33,11 +33,9 @@ Your components will need to adapt successfully to tablet and mobile displays, a
 
 ## Getting Started
 
-To get started, please start by cloning down this repository.
+To get started, please start by forking this repository.
 
 In the root of the project, run `npm install`, and then run `npm run dev` to start up the development environment.
-
-Note that this repo has been made specifically for your project, so you can and should interact directly with it (as opposed to creating a fork). We've set up GitHub Actions CI and Heroku review apps within this repo to assist with your development workflow.
 
 ### Development Prerequisites
 
@@ -158,9 +156,9 @@ We also have Axe validation within Storybook, installed as an addon, to assist w
 
 ## Submitting Your Test
 
-Once you feel ready, push your code to a branch on GitHub and open a PR. Our CI test suite will run, and a review web app will spin up on Heroku. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
+Once you feel ready, push your code to your fork on GitHub. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
 
-Let your recruiter know you've submitted your test, and our team will be in touch shortly after to follow up with a technical review.
+Let your recruiter know you've completed your test and share the url to your fork, and our team will be in touch shortly after to follow up with a technical review.
 
 # Thank You!
 
