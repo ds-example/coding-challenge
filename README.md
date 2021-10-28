@@ -33,7 +33,7 @@ Your components will need to adapt successfully to tablet and mobile displays, a
 
 ## Getting Started
 
-To get started, please start by forking this repository.
+To get started, please start by cloning this repository.
 
 In the root of the project, run `npm install`, and then run `npm run dev` to start up the development environment.
 
@@ -150,15 +150,15 @@ Static assets can be stored in the `static` folder.
 
 ## Testing & Validating Code
 
-We have a few methods for testing and validating the code you write. We have eslint and stylelint standards established, those can be run through `npm test`, and are additionally run in our CI environment when Pull Requests are opened.
+We have a few methods for testing and validating the code you write. We have eslint and stylelint standards established, those can be run through `npm test`.
 
 We also have Axe validation within Storybook, installed as an addon, to assist with Accessibility validation.
 
 ## Submitting Your Test
 
-Once you feel ready, push your code to your fork on GitHub (on your own GitHub page). Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
+Once you feel ready, push your code to a repo you own on GitHub. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
 
-Let your recruiter know you've completed your test and share the url to your fork, and our team will be in touch shortly after to follow up with a technical review.
+Let your recruiter know you've completed your test and share the url to your repo, and our team will be in touch shortly after to follow up with a technical review.
 
 # Thank You!
 
