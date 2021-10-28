@@ -156,7 +156,7 @@ We also have Axe validation within Storybook, installed as an addon, to assist w
 
 ## Submitting Your Test
 
-Once you feel ready, push your code to your fork on GitHub. Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
+Once you feel ready, push your code to your fork on GitHub (on your own GitHub page). Feel free to make additional pushes to resolve any test failures or make any last minute adjustments.
 
 Let your recruiter know you've completed your test and share the url to your fork, and our team will be in touch shortly after to follow up with a technical review.
 
