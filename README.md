@@ -6,7 +6,7 @@ Hello, and welcome to our developer test! Thank you for considering the Salesfor
 
 This code challenge is going to introduce you to a lot of technology you may not be familiar with, and it's important to note up front that we do not expect you to end up with a completely polished end result. Rather, we are looking to give you a sense of what it'd be like to work on our product here at Salesforce.
 
-We are hoping you invest around 2-4 hours on this effort. Take this time to explore [Storybook](https://storybook.js.org/), read up on [Elix Web Components](https://component.kitchen/elix) (or use Vanilla JS or another JS framework of your choosing), and dig into the code! We have left lots of source code to explore, to help you get a sense of our code style and how things function within our tech stack. We have also left boilerplate code for the engineering challenge we have given you.
+We are hoping you invest around 2-4 hours on this effort. Take this time to explore [Storybook](https://storybook.js.org/), read up on [Elix Web Components](https://component.kitchen/elix) (or use Vanilla JS or anything else you choose), and dig into the code!Just make sure the end result is a web component. We have left lots of source code to explore, to help you get a sense of our code style and how things function within our tech stack. We have also left boilerplate code for the engineering challenge we have given you.
 
 We hope you use this challenge to get a foundational understanding of what your work will be like at Salesforce. Do take notes and get some questions together, after you submit your test you will have a follow up code review with our engineering team.
 
