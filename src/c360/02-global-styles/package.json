@@ -1,0 +1,11 @@
+{
+  "name": "@c360/global-styles",
+  "private": true,
+  "description": "Global ITCSS Styles",
+  "style": "index.scss",
+  "version": "0.0.0",
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "@c360/core-styles": "^0.0.0"
+  }
+}

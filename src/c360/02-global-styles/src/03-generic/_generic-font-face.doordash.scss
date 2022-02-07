@@ -1,0 +1,20 @@
+/* ------------------------------------ *\
+  ITCSS Generic - Global @fontface
+\* ------------------------------------ */
+
+$fonts: (
+  url('./fonts/font-name-regular.woff2') format('woff2'),
+  'Font Name',
+  400,
+  normal
+);
+
+@each $font-src, $font-name, $font-weight, $font-style in $fonts {
+  @font-face {
+    font-family: $font-name;
+    src: $font-src;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}

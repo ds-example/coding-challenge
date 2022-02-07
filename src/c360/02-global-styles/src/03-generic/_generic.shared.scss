@@ -1,0 +1,33 @@
+/* ------------------------------------ *\
+  ITCSS Generic - Shared Styles
+\* ------------------------------------ */
+
+/**
+ * Declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// List spacing
+dd,
+ol,
+ul {
+  margin-left: 0;
+  padding-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  margin-bottom: 1.5rem;
+}
