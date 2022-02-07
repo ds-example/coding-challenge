@@ -1,0 +1,24 @@
+{
+  "include": ["src/**/*", "./typings.d.ts", ".storybook/**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "preserveWatchOutput": true,
+    "pretty": true,
+    "checkJs": true,
+    "jsx": "react",
+    "target": "ESNext",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "module": "esnext",
+    "outDir": "dist",
+    "useDefineForClassFields": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  }
+}
