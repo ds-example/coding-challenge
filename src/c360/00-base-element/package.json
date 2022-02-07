@@ -1,0 +1,10 @@
+{
+  "name": "@c360/base-element",
+  "private": true,
+  "description": "Web component enhancements based off of LitElement",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "lit": "^2.1.2"
+  }
+}
