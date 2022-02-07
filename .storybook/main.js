@@ -1,10 +1,15 @@
-const path = require('path')
+const path = require('path');
+const { merge } = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../src/intro/**/*.stories.js',
     '../src/c360/**/*.stories.js',
-    '../src/sds/**/*.stories.js'
+    '../src/sds/**/*.stories.js',
   ],
   addons: [
     {
@@ -17,36 +22,64 @@ module.exports = {
     },
     '@storybook/addon-viewport',
     '@storybook/addon-a11y',
-    '@storybook/addon-storysource'
+    '@storybook/addon-storysource',
   ],
-
   webpackFinal: async (config, { configType }) => {
+    const customRules = [];
 
-    // remove their css loader...
-    const rules = config.module.rules.filter((rule) => !rule.test.toString().match('.css'))
+    // remove default css rules + replace with Sass-firendly webpack config
+    const originalRules = config.module.rules.filter(
+      (rule) => !rule.test.toString().match('.css'),
+    );
 
-    // and replace with our own.
-    rules.push({
+    originalRules.push({
       test: /\.css$/,
       use: ['raw-loader'],
       include: path.resolve(__dirname, '../src'),
-      exclude: path.resolve(__dirname, '../src/globals.css')
-    })
+      exclude: path.resolve(__dirname, '../src/globals.css'),
+    });
 
-    rules.push({
+    originalRules.push({
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
-      include: path.resolve(__dirname, '../src/globals.css')
-    })
+      include: path.resolve(__dirname, '../src/globals.css'),
+    });
 
-    // Add markdown support
-    rules.push({
+    config.module.rules = originalRules;
+
+    const customPlugins = [
+      new MiniCssExtractPlugin({
+        filename: `[name].css`,
+        chunkFilename: `[id].css`,
+      }),
+    ];
+
+    customRules.push({
+      test: /\.(scss)$/,
+      oneOf: [
+        {
+          issuer: /\.(ts)$/,
+          use: ['css-loader', 'sass-loader'],
+        },
+        {
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    });
+
+    // Add markdown (.md) support
+    customRules.push({
       test: /\.md$/,
-      use: ['markdown-loader']
-    })
+      use: ['markdown-loader'],
+    });
 
-    config.module.rules = rules
+    const updatedConfig = merge(config, {
+      module: {
+        rules: customRules,
+      },
+      plugins: customPlugins,
+    });
 
-    return config
-  }
-}
+    return updatedConfig;
+  },
+};
