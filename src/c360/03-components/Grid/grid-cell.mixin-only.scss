@@ -1,0 +1,15 @@
+@import '@c360/core-styles';
+
+/**
+ * 2. Reset local font-size inheritance to prevent components w/o default font sizes from breaking
+ */
+
+@mixin grid-cell-styles {
+  @include padding-left(small);
+  display: inline-block;
+  position: relative;
+  padding-left: 1rem;
+  vertical-align: top;
+  font-size: 1rem; /** [2] **/
+  padding-bottom: #{var(--c360-grid-vspacing, 0)};
+}
