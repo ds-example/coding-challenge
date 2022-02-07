@@ -1,0 +1,10 @@
+{
+  "name": "@sds/components",
+  "private": true,
+  "description": "SDS Example Base Components",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "elix": "^15.0.1"
+  }
+}
