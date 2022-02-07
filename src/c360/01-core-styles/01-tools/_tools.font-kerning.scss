@@ -1,0 +1,15 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Font Kerning
+\* ------------------------------------ */
+
+/// This applies default font kerning styles for supporting browsers.
+/// @example scss - Setting globals
+/// *,
+/// *:before,
+/// *:after {
+///  @include font-kerning;
+/// }
+@mixin font-kerning() {
+  font-feature-settings: 'kern';
+  font-kerning: normal; // Safari 7+, Firefox 24+, Chrome 33(?)
+}

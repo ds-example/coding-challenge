@@ -1,0 +1,38 @@
+/* ------------------------------------ *\
+  ITCSS Settings - Font Weights
+\* ------------------------------------ */
+
+$font-weight--regular: 400 !default;
+$font-weight--semibold: 600 !default;
+$font-weight--bold: 700 !default;
+$font-weight--black: 900 !default;
+
+// @if ($font-weight--normal < 400) {
+//   @error "The normal font weight can't be lighter than 400";
+// }
+
+// @if ($font-weight--bold < 600) {
+//   @error "The bold font weight can't be lighter than 600";
+// }
+
+// @if ($font-weight--bold < $font-weight--normal) {
+//   @error "Sorry, but your bold font weight, `#{$font-weight--bold}` can't be lighter than your normal font weight, `#{$font-weight--normal}`!";
+// }
+
+// @if ($font-weight--bold - $font-weight--normal < 300) {
+//   @error "Sorry, but your bold and normal font weights have values that are too close together. Please choose values that are at least 300 or more apart`!";
+// }
+
+// @if ($font-weight--bold - $font-weight--semibold < 100) {
+//   @error "Sorry, but your bold and semi-bold font weights have values that are too close together. Please choose values that are at least 100 or more apart`!";
+// }
+
+/// Definition of all possible options of text weights.
+/// @type Map
+/// @see {mixin} font-weight
+$font-weights: (
+  bold: $font-weight--bold,
+  semibold: $font-weight--semibold,
+  regular: $font-weight--regular,
+  black: $font-weight--black,
+) !default;

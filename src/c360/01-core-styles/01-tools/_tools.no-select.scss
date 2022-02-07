@@ -1,0 +1,12 @@
+/* ------------------------------------ *\
+  ITCSS Tools - No Select
+\* ------------------------------------ */
+
+/// Provides a method for controlling the user's ability to select text.
+/// @example scss
+/// .element {
+///    @include no-select;
+/// }
+@mixin no-select {
+  user-select: none;
+}

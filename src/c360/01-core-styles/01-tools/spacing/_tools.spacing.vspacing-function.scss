@@ -1,0 +1,28 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Spacing - Vertical Spacing
+\* ------------------------------------ */
+
+@function vspacing($size, $type: '') {
+  @if ($type == 'squished') {
+    $type: $spacing-squished;
+  } @else if ($type == 'stretched') {
+    $type: $spacing-stretched;
+  } @else {
+    $type: 1;
+  }
+
+  @return #{calc(#{spacing($size)} * #{$spacing-leading * $type})};
+}
+
+/// An alias for @function vspacing
+/// @alias vspacing
+/// @param {string} $size - T-shirt size
+/// @return {number}
+/// @requires vspacing
+/// @example scss
+/// .element {
+///   width: vertical-spacing(xsmall);
+/// }
+@function vertical-spacing($size, $type: null) {
+  @return vspacing($size, $type);
+}

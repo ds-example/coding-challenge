@@ -1,0 +1,11 @@
+{
+  "name": "@c360/core-styles",
+  "private": true,
+  "description": "Core Styles",
+  "style": "index.scss",
+  "version": "0.0.0",
+  "dependencies": {
+    "sassy-maps": "at-import/Sassy-Maps",
+    "sass-mq": "^6.0.0"
+  }
+}

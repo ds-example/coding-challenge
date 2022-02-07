@@ -1,0 +1,51 @@
+/* ------------------------------------ *\
+  ITCSS Settings - Spacing Scale
+  Loosely insprired by https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62
+\* ------------------------------------ */
+
+/// Default leading spacing value
+$spacing-leading: 0.875 !default;
+
+/// Squished spacing value
+$spacing-squished: 0.75 !default;
+
+/// Stretched spacing value
+$spacing-stretched: 1.5 !default;
+
+/// Global spacing scale values. Can be exported to JSON (or other formats) build tool plugins..
+/// @type Map
+$spacing-values: (
+  // xxxsmall: 0.125,
+  // xxsmall: 0.25,
+  // xsmall: 0.5,
+  // small: 0.75,
+  // medium: 1,
+  // large: 1.5,
+  // xlarge: 2,
+  // xxlarge: 3,
+  xxxsmall: #{var(--sds-g-spacing-xxx-small)},
+  xxsmall: #{var(--sds-g-spacing-xx-small)},
+  xsmall: #{var(--sds-g-spacing-x-small)},
+  small: #{var(--sds-g-spacing-small)},
+  medium: #{var(--sds-g-spacing-medium)},
+  large: #{var(--sds-g-spacing-large)},
+  xlarge: #{var(--sds-g-spacing-x-large)},
+  xxlarge: #{var(--sds-g-spacing-xx-large)}
+) !default;
+
+/// Defines which CSS properties we want to map to the vertical / horizontal spacing calculations..
+/// @type Map
+$spacing-properties: ('padding', 'margin') !default;
+
+/// Spacing directions (ex. @include padding-top, @include margin, etc)
+/// @type Map
+$spacing-directions: ('', 'top', 'right', 'bottom', 'left') !default;
+
+/// Spacing scale types.
+/// @type Map
+// $spacing-types: ('', 'squished', 'stretched') !default;
+$spacing-types: ('');
+
+/// A map created from $spacing-values
+/// @see $spacing-values
+$spacing-sizes: generate-spacing-scale($spacing-values);

@@ -1,0 +1,24 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Spacing - Spacing Function (Horziontal)
+\* ------------------------------------ */
+
+/// Convenience function for pulling data from $spacing-sizes
+/// @param {string} $size - T-shirt size to pull
+/// @requires $spacing-sizes
+/// @return {number} A spacing unit
+/// @example scss
+/// .element {
+///   min-height: spacing(large);
+/// }
+
+@function spacing($size) {
+  @if (map-get($spacing-sizes, nth($size, 1)) == null) {
+    @warn "Unknown spacing size";
+  }
+
+  // @if $border-width != 0 {
+  //   $border-width: rem($border-width);
+  // }
+
+  @return map-get($spacing-sizes, nth($size, 1));
+}

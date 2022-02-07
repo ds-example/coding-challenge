@@ -1,0 +1,30 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Internal Helpers - Generate Spacing Scale
+\* ------------------------------------ */
+
+/// Helper function to generate the default spacing scale
+/// @param {list} $sizes - Sizes to iterate over
+/// @param {string} $char [''] - String to append to $keyName setting
+/// @return {map} $map
+/// @access private
+/// @see $spacing-sizes
+/// @example scss - $spacing-values not shown
+///   $spacing-sizes: generate-spacing-scale($spacing-values);
+@function generate-spacing-scale($sizes, $char: '') {
+  $map: ();
+  @each $name, $value in $sizes {
+    $keyName: $name;
+    @if ($char != '' and $keyName != null) {
+      $keyName: $char + $keyName;
+    }
+
+    $map: map-merge(
+      $map,
+      (
+        $keyName: $value,
+      )
+    );
+  }
+
+  @return $map;
+}

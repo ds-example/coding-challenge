@@ -1,0 +1,12 @@
+/* ------------------------------------ *\
+  ITCSS Settings - Border Radius
+\* ------------------------------------ */
+
+/// Border-radius scale.
+/// @type Map
+$border-radius-sizes: (
+  none: 0,
+  small: #{var(--sds-g-radius-small)},
+  medium: #{var(--sds-g-radius-medium)},
+  large: #{var(--sds-g-radius-large)},
+);

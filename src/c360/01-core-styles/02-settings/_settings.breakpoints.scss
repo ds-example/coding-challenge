@@ -1,0 +1,18 @@
+/* ------------------------------------ *\
+  ITCSS Settings - Breakpoints
+\* ------------------------------------ */
+
+/// Major named breakpoints
+/// @type Map
+/// @see breakpoint mixin / function
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1400px,
+);
+
+/// A duplicate of $breakpoints - used within mq()
+// Remaps the design system's internal bp Sassmap to Sass MQ's `$mq-breakpoints`
+/// @see {mixin} c360-mq
+$mq-breakpoints: $breakpoints;

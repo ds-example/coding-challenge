@@ -1,0 +1,37 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Breakpoints
+\* ------------------------------------ */
+
+/// This returns the breakpoint value (with px) from $breakpoints map
+/// @param {string} $name - The name of the breakpoint (from within $breakpoints)
+/// @return {string} The breakpoint value (with px)
+/// @example scss
+/// .element {
+///   @media screen and (max-width: #{breakpoint(xsmall)}) {
+///     font-size: 24px;
+///   }
+/// }
+@function breakpoint($name) {
+  @return map-get($breakpoints, $name);
+}
+
+// alias for breakpoint
+@function bp($name) {
+  @return breakpoint($name);
+}
+
+/// This provides a wrapper mixin for performing media queries with mq() which allows for the use of:
+/// $from (inclusive min-width boundary), $until (exclusive max-width boundary), $and (additional custom directives), $media-type (media type: screen, print, etc)
+/// @link https://github.com/sass-mq/sass-mq Sass MQ on GitHub
+/// @param $args... - Media Query args ([breakpoint-name], $from, $until, $and, $media-type)
+/// @example scss - mq() wrapper
+/// .element {
+///   @include c360-mq(($until: small){
+///     flex-direction: column;
+///   }
+/// }
+@mixin c360-mq($args...) {
+  @include mq($args...) {
+    @content;
+  }
+}

@@ -1,0 +1,32 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Spacing - Margins
+\* ------------------------------------ */
+
+@mixin margin($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  @include directional-property(margin, false, $sizes, $important);
+}
+
+@mixin margin-top($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  $sizes: nth($sizes, 1) null null null;
+  @include directional-property(margin, false, $sizes, $important);
+}
+
+@mixin margin-bottom($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  $sizes: null null nth($sizes, 1) null;
+  @include directional-property(margin, false, $sizes, $important);
+}
+
+@mixin margin-right($sizes, $important: null) {
+  $sizes: get-spacing-size($sizes, null);
+  $sizes: null nth($sizes, 2) null null;
+  @include directional-property(margin, false, $sizes, $important);
+}
+
+@mixin margin-left($sizes, $important: null) {
+  $sizes: get-spacing-size($sizes, null);
+  $sizes: null null null nth($sizes, 2);
+  @include directional-property(margin, false, $sizes, $important);
+}

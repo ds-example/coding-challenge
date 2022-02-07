@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    ITCSS Settings - Colors
+\*------------------------------------*/
+
+@use 'sass:color';
+
+$all-colors: ();
+
+$brand-colors: (
+  brand: (
+    'base-contrast-4': #{var(--sds-g-color-brand-base-contrast-4)},
+    'base-contrast-3': #{var(--sds-g-color-brand-base-contrast-3)},
+    'base-contrast-2': #{var(--sds-g-color-brand-base-contrast-2)},
+    'base-contrast-1': #{var(--sds-g-color-brand-base-contrast-1)},
+    'base-4': #{var(--sds-g-color-brand-base-4)},
+    'base-3': #{var(--sds-g-color-brand-base-3)},
+    'base-2': #{var(--sds-g-color-brand-base-2)},
+    'base-1': #{var(--sds-g-color-brand-base-1)},
+  ),
+);
+$all-colors: map-recursive-merge($brand-colors, $all-colors);
+
+$destructive-colors: (
+  destructive: (
+    'base-contrast-4': #{var(--sds-g-color-destructive-base-contrast-4)},
+    'base-contrast-3': #{var(--sds-g-color-destructive-base-contrast-3)},
+    'base-contrast-2': #{var(--sds-g-color-destructive-base-contrast-2)},
+    'base-contrast-1': #{var(--sds-g-color-destructive-base-contrast-1)},
+    'base-4': #{var(--sds-g-color-destructive-base-4)},
+    'base-3': #{var(--sds-g-color-destructive-base-3)},
+    'base-2': #{var(--sds-g-color-destructive-base-2)},
+    'base-1': #{var(--sds-g-color-destructive-base-1)},
+  ),
+);
+$all-colors: map-recursive-merge($destructive-colors, $all-colors);
+
+$neutral-colors: (
+  neutral: (
+    'base-contrast-4': #{var(--sds-g-color-neutral-base-contrast-4)},
+    'base-contrast-3': #{var(--sds-g-color-neutral-base-contrast-3)},
+    'base-contrast-2': #{var(--sds-g-color-neutral-base-contrast-2)},
+    'base-contrast-1': #{var(--sds-g-color-neutral-base-contrast-1)},
+    'base-4': #{var(--sds-g-color-neutral-base-4)},
+    'base-3': #{var(--sds-g-color-neutral-base-3)},
+    'base-2': #{var(--sds-g-color-neutral-base-2)},
+    'base-1': #{var(--sds-g-color-neutral-base-1)},
+  ),
+);
+$all-colors: map-recursive-merge($neutral-colors, $all-colors);
+
+// example of how (when using actual color values vs pure CSS vars at this level) programatic calculations can be performed on the base set of colors + folded into the global set of color definitions
+// $neutral-color-variations: (
+//   neutral: (
+//     150: color.scale(color(neutral, 100), $lightness: -5%),
+//   ),
+// );
+// $all-colors: map-recursive-merge($neutral-color-variations, $all-colors);

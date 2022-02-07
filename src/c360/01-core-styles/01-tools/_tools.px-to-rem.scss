@@ -1,0 +1,23 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Pixel to REM
+\* ------------------------------------ */
+
+/// Utility function to convert pixels to rems
+/// @param {string|number} $pixels - The pixel value to convert
+/// @param {string|number} $context [16px] - Value to divide pixel value by (before rem multiplication)
+/// @return {string} rem value (with unit)
+/// @example scss
+/// .element {
+///   font-size: rem(18px);
+/// }
+@use "sass:math";
+
+@function rem($pixels, $context: 16px) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return math.div($pixels, $context) * 1rem;
+}

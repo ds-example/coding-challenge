@@ -1,0 +1,51 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Font Size
+\* ------------------------------------ */
+
+/// This returns the font-size and relevant line-height for a specific element.
+/// @param {string} $size - Defines the size of the text: xsmall, small, base, medium, lg, xl, or 2xl.
+/// @param {string} $leading [regular] - Defines the line-height of the text: regular or tight.
+/// @requires {mixin} poly-fluid-sizing
+/// @example scss
+/// .element {
+///    @include font-size(large);
+/// }
+@mixin font-size($size, $leading: 'default', $important: null) {
+  @if $important == important {
+    $important: !important;
+  }
+
+  $font-size: map-get-deep($font-sizes, $size, 'font-size');
+
+  @if (type-of($font-size) == 'map') {
+    $length: length(map-keys($font-size));
+
+    @if ($length < 2) {
+      font-size: nth($font-size, 2) $important;
+    } @else {
+      @include poly-fluid-sizing('font-size', $font-size, $important);
+    }
+  } @else {
+    font-size: $font-size $important;
+  }
+
+  @if ($leading != '' and $leading != null) {
+    @if (type-of($leading) == number) {
+      $leading: $leading;
+    } @else if (type-of($leading) == string) {
+      $leading: map-get-deep($font-sizes, $size, 'line-height');
+    }
+
+    @if (type-of($leading) == 'map') {
+      $length: length(map-keys($leading));
+
+      @if ($length < 2) {
+        line-height: nth($leading, 2) $important;
+      } @else {
+        @include poly-fluid-sizing('line-height', $leading, $important);
+      }
+    } @else {
+      line-height: $leading $important;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Color
+\* ------------------------------------ */
+
+/// Mixin to return color value
+/// @param {string} $color - Color name (e.g. indigo)
+/// @param {string} $tone color tone (e.g. light, xlight, dark, xdark, or base)
+/// @param {string} $important [null] - If 'important', then !important will be added onto the declaration string value
+/// @example scss - color mixin
+/// .element {
+///    @include color(violet);
+/// }
+@mixin color($color, $tone: 'base', $opacity: 1, $important: null) {
+  @if $important == important {
+    $important: !important;
+  }
+
+  /* stylelint-disable-next-line */
+  color: color($color, $tone, $opacity) $important;
+}
+
+/// Helper functions for applying global color swatches stored in Sass Maps
+/// @param {string} $color - Base color (e.g. bubble-gum)
+/// @param {string} $tone color tone (e.g. light, xlight, dark, xdark, or base)
+/// @return {HSL|RGB|HEX} The mapped color value
+@function color($color, $tone: 'base') {
+  @if (map-get($all-colors, $color)) {
+    $colorPalette: map-get($all-colors, $color);
+
+    // if the color selected is a simple map with just one base value, return that -- otherwise grab the deeper color value
+    @if type-of($colorPalette) == 'map' {
+      @return map-get($colorPalette, $tone);
+    } @else {
+      @return map-get($all-colors, $color);
+    }
+  } @else {
+    @return map-get-deep($all-colors, quote($color), $tone);
+  }
+}

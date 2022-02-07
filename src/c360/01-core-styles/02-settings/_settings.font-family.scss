@@ -1,0 +1,19 @@
+/* ------------------------------------ *\
+  ITCSS Settings - Font Family
+\* ------------------------------------ */
+
+/// Default font family stack
+/// @type Map
+/// @see {mixin} font-family
+$font-families: (
+  sans:
+    'var(--custom-font, var(--default-font)), var(--default-font), sans-serif',
+) !default;
+
+@if ($global-export-json-data == true) {
+  @include export-json('data/font-families.json', $font-families);
+}
+
+// Fonts
+$font-sans-pro: 'Charlie Display', sans-serif;
+$font-body: $font-sans-pro;

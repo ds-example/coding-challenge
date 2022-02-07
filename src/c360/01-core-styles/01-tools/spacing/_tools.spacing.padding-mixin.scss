@@ -1,0 +1,32 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Spacing - Padding Mixin
+\* ------------------------------------ */
+
+@mixin padding($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  @include directional-property(padding, false, $sizes, $important);
+}
+
+@mixin padding-top($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  $sizes: nth($sizes, 1) null null null;
+  @include directional-property(padding, false, $sizes, $important);
+}
+
+@mixin padding-bottom($sizes, $type: null, $important: null) {
+  $sizes: get-spacing-size($sizes, $type);
+  $sizes: null null nth($sizes, 1) null;
+  @include directional-property(padding, false, $sizes, $important);
+}
+
+@mixin padding-left($sizes, $important: null) {
+  $sizes: get-spacing-size($sizes, null);
+  $sizes: null null null nth($sizes, 2);
+  @include directional-property(padding, false, $sizes, $important);
+}
+
+@mixin padding-right($sizes, $important: null) {
+  $sizes: get-spacing-size($sizes, null);
+  $sizes: null nth($sizes, 2) null null;
+  @include directional-property(padding, false, $sizes, $important);
+}

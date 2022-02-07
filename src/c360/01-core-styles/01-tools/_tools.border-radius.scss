@@ -1,0 +1,33 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Border Radius
+\* ------------------------------------ */
+
+/// Border radius mixin
+/// @param {string} $value
+/// @example scss - border-radius mixin
+/// .element {
+///    @include border-radius(small);
+/// }
+@mixin border-radius($value, $important: null) {
+  $border-radius: map-get-deep($border-radius-sizes, $value);
+
+  @if map-has-key($border-radius-sizes, $value) {
+    border-radius: $border-radius $important;
+  } @else {
+    @error 'The #{$value} value passed into @include border-radius() is not an option defined in $border-radius-sizes';
+  }
+}
+
+/// Border radius function
+/// @param {string} $value
+/// @example scss - border-radius function
+/// .element {
+///    border-radius: border-radius(small);
+/// }
+@function border-radius($value) {
+  @if map-has-key($border-radius-sizes, $value) {
+    @return map-get($border-radius-sizes, $value);
+  } @else {
+    @error 'The #{$value} value passed into border-radius() is not an option defined in $border-radius-sizes';
+  }
+}

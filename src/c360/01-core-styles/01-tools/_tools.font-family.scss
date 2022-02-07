@@ -1,0 +1,18 @@
+/* ------------------------------------ *\
+  ITCSS Tools - Font Family
+\* ------------------------------------ */
+
+/// Returns the font-family stack based on the type
+/// @param {string} $type - Defines the font-family type: serif vs sans.
+/// @example scss - Mixin
+/// body {
+///    @include font-family(sans);
+/// }
+/// @example css - Output
+/// body {
+///    font-family: 'Helvetica Nue', sans-serif;
+/// }
+///
+@mixin font-family($type: sans) {
+  font-family: unquote(map-get-deep($font-families, $type));
+}
