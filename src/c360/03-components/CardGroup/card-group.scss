@@ -1,0 +1,7 @@
+@import '@c360/core-styles';
+@import '@c360/components-grid/grid-cell.scss';
+
+// workaround (alt) to rendering <c360-grid-cell>s within <c360-card-group>
+::slotted(c360-card) {
+  @include grid-cell-styles();
+}

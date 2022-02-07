@@ -1,0 +1,18 @@
+@import '@c360/core-styles';
+
+/**
+ * 1. Workaround to Safari layout getting thrown off when using a negative letter-spacing to remove inline-block whitespace
+ */
+.c360-c-grid {
+  flex: 1 1 auto; // By default, fill any available space (in case the grid is used within a flexbox friendly container)
+  margin: 0;
+  margin-left: #{calc(#{spacing(small)} * -1)};
+  padding: 0;
+  list-style: none;
+  font-size: 0; /* stylelint-disable-line */ /* [1] */
+}
+
+.c360-c-grid--matrix {
+  --c360-grid-vspacing: #{spacing(medium)};
+  margin-bottom: #{calc(var(--c360-grid-vspacing) * -1)};
+}

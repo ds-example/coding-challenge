@@ -1,0 +1,44 @@
+@import '@c360/core-styles';
+
+:host {
+  @include font-weight(bold);
+  @include margin-bottom(small);
+  display: block;
+}
+
+.c360-c-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c360-c-text--color-default {
+  color: inherit;
+}
+
+.c360-c-text--color-brand {
+  color: color(brand, base-contrast-2);
+}
+
+@each $name, $value in $font-weights {
+  .c360-c-text--#{$name} {
+    @include font-weight($name);
+  }
+}
+
+$sizes: (
+  xsmall: 3,
+  small: 4,
+  medium: 5,
+  large: 6,
+  xlarge: 7,
+  xxlarge: 8,
+  xxxlarge: 9,
+  xxxxlarge: 10,
+  xxxxxlarge: 11,
+);
+
+@each $fontSizeName, $fontSizeValue in $sizes {
+  .c360-c-text--#{$fontSizeName} {
+    @include font-size($fontSizeValue);
+  }
+}

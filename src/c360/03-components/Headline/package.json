@@ -1,0 +1,11 @@
+{
+  "name": "@c360/components-headline",
+  "private": true,
+  "description": "C360 Headline Web Component",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "@c360/base-element": "^0.0.0",
+    "@sds/components": "^0.0.0"
+  }
+}

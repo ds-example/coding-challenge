@@ -1,6 +1,7 @@
 :host([size='x-large']) {
+  display: block;
   font-weight: 200;
-
+  margin-bottom: var(--sds-g-spacing-medium);
   --sds-c-headline-font-size: var(--sds-g-font-size-11);
 }
 

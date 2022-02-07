@@ -1,0 +1,10 @@
+{
+  "name": "@c360/components-image",
+  "private": true,
+  "description": "C360 Image Web Component",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "@c360/base-element": "^0.0.0"
+  }
+}

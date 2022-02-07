@@ -1,0 +1,10 @@
+{
+  "name": "@c360/components-text",
+  "private": true,
+  "description": "C360 Text Web Component",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "@c360/base-element": "^0.0.0"
+  }
+}

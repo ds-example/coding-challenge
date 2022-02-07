@@ -1,0 +1,24 @@
+@import '@c360/core-styles';
+
+.c360-c-card {
+  @include border-radius(medium);
+  @include font-size(5);
+  @include padding(medium);
+  border-color: color(neutral, base-3);
+  border-width: 1px;
+  border-style: solid;
+  background-color: color(neutral, base-2);
+}
+
+::slotted(c360-headline),
+::slotted(c360-text) {
+  @include margin-bottom(small);
+}
+
+::slotted(c360-img) {
+  @include margin-bottom(small);
+}
+
+.c360-c-card__footer {
+  @include padding-top(medium);
+}

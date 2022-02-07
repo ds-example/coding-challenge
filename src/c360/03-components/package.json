@@ -1,0 +1,16 @@
+{
+  "name": "@c360/components",
+  "private": true,
+  "description": "C360 Web Components",
+  "module": "./index.ts",
+  "version": "0.0.0",
+  "dependencies": {
+    "@c360/components-button": "^0.0.0",
+    "@c360/components-card": "^0.0.0",
+    "@c360/components-card-group": "^0.0.0",
+    "@c360/components-grid": "^0.0.0",
+    "@c360/components-headline": "^0.0.0",
+    "@c360/components-image": "^0.0.0",
+    "@c360/components-text": "^0.0.0"
+  }
+}
